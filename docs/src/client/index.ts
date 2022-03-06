@@ -88,7 +88,7 @@ let state: State
 const start = async () => {  
   d.level( 'none' )
   
-  const sourceImg = await loadImage('./img/test-pattern.png')
+  const sourceImg = await loadImage('./img/photo.png')
   const sourceCanvas = imageToCanvas(sourceImg)
   const emptyScapeXml = await loadText('./data/empty.scape')
 
