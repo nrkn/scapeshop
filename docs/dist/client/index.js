@@ -7,15 +7,16 @@ import { canvasToImageData, fileImage, inputFile, imageToCanvas, loadImage, load
 import { thresholdMapper } from '../pixel-mappers/threshold.js';
 import { createPreview } from './preview.js';
 import { option } from '../lib/h.js';
-import { towerHeightMapper } from '../pixel-mappers/height.js';
+import { baseHeightMapper, towerHeightMapper } from '../pixel-mappers/height.js';
 import { baseColorMapper } from '../pixel-mappers/color.js';
 import { baseColorHeightMapper, towerColorHeightMapper } from '../pixel-mappers/color-height.js';
 import { createDebug } from './debug.js';
 const pixelMappers = {
-    'color + height (base)': baseColorHeightMapper,
     'color + height (tower)': towerColorHeightMapper,
+    'color + height (base)': baseColorHeightMapper,
     threshold: thresholdMapper,
-    height: towerHeightMapper,
+    'height (tower)': towerHeightMapper,
+    'height (base)': baseHeightMapper,
     color: baseColorMapper,
     custom: () => [{ t: 15, h: 0 }]
 };

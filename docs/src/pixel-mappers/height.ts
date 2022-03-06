@@ -31,17 +31,11 @@ export const baseHeightMapper: PixelMapper = rgba => {
   const firstFloor = 0
   const maxFloors = 8
 
-  const floors = Math.floor(l * maxFloors)
+  const h = Math.floor(l * maxFloors) + firstFloor - 1
 
-  const voxels: Voxel[] = []
+  if( h === -1 ) return []
+  
+  const t = h === 0 ? 15 : 14
 
-  for( let i = 0; i < floors; i++ ){
-    const h = i + firstFloor
-
-    const t = h === 0 ? 15 : 14
-
-    voxels.push({ t, h })
-  }
-
-  return voxels
+  return [{ t, h }]
 }
