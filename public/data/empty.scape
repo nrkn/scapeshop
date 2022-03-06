@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaveData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+  <lastWriteTime>637812725336340241</lastWriteTime>
+  <cam>
+    <x>86</x>
+    <y>181</y>
+    <z>68</z>
+  </cam>
+  <sun>
+    <h>127</h>
+    <r>127</r>
+  </sun>
+  <corners></corners>
+  <voxels></voxels>
+</SaveData>

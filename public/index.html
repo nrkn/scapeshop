@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scapeshop</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <header><h1><a href="./">scapeshop</a></h1></header>
+  <main>
+    <section id="tools">
+      <form>
+        <fieldset>
+          <legend>Source Image</legend>
+          <label class="upload">
+            <span>Load image</span>
+            <input id="sourceImage" type="file" accept="image/png,image/jpeg">
+          </label>
+          <p id="imageSize">
+            <t-t></t-t> X <t-t></t-t>
+          </p>
+          <img id="sourceImg">
+          <button id="loadImageDefault">Load default image</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Output Scape</legend>
+          <a id="downloadOutput">Download output .scape</a>
+          <p id="outputSize"><t-t></t-t> X <t-t></t-t></p>
+          <p id="outputCorners"><t-t></t-t> corners</p>
+          <p id="outputVoxels"><t-t></t-t> voxels</p>
+        </fieldset> 
+
+        <fieldset>
+          <legend>Pixel Mapper</legend>
+          <select id="pixelMapper"></select>
+          <label class="upload">
+            <span>Custom pixel mapper</span>
+            <input id="customPixelMapper" type="file" accept=".js">
+          </label>
+          <p>
+            <a href="https://gist.github.com/nrkn/5dcf84a15b6e6ecc02a047ffdf55194f" target="_blank">Custom pixel mapper example</a>
+          </p>
+        </fieldset>
+
+        <!-- <fieldset>
+          <legend>Pixel Mapper Options</legend>
+          <div id="pixelMapperOptions"></div>
+        </fieldset> -->
+
+        <fieldset>
+          <legend>Offset</legend>
+          <label class="range">
+            <span>X</span>
+            <input id="offsetX" type="number" step="1" value="0" min="-1023" max="1023">
+            <input id="offsetXRange" type="range" step="1" value="0" min="-1023" max="1023">
+          </label>
+          <label class="range">
+            <span>Y</span>
+            <input id="offsetY" type="number" step="1" value="0" min="-1023" max="1023">
+            <input id="offsetYRange" type="range" step="1" value="0" min="-1023" max="1023">
+          </label>
+          <button id="loadOffsetDefault">Reset to center</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Grid</legend>
+          <label class="upload">
+            <span>Load from .scape</span>
+            <input id="scapeGrid" type="file" accept=".scape">
+          </label>
+          <p id="gridSize">
+            <t-t></t-t> X <t-t></t-t>
+          </p>
+          <p id="gridCorners">
+            <t-t></t-t> corners
+          </p>
+          <button id="loadGridDefault">Load default grid</button>
+        </fieldset>     
+        
+        <fieldset>
+          <legend>Preview</legend>
+          <label class="check">
+            <span>Show all voxels?</span>
+            <input id="showAllVoxels" type="checkbox" checked>
+          </label>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="view">
+    </section>
+
+    <section id="debug">      
+    </section>
+  </main>
+  <!-- <script defer src="main.js"></script> -->
+  <script defer type="module" src="/dist/client/index.js"></script>
+</body>
+
+</html>

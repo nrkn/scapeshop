@@ -1,0 +1,152 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;  
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0.25rem;
+}
+
+#tools form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#tools form img {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+
+#tools form p {
+  background: #fff;
+  margin: 0;
+  padding: 0 0.25rem;
+}
+
+#tools fieldset {
+  background: #eee;  
+  padding: 0 0.25rem;
+}
+
+#tools legend {
+  background-color: #eee;
+  font-size: 1rem;
+  padding: 0.25rem;
+}
+
+#tools select {
+  margin: 0 0.5rem;
+}
+
+#tools label {
+  background: #ddd;
+  display: flex; 
+  flex-direction: row; 
+  gap: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.25rem;
+}
+
+#tools .upload {
+  flex-direction: column;
+}
+
+#tools .range {
+  display: grid;
+  grid-template-columns: auto auto 1fr;  
+  align-items: center;
+}
+
+#tools .range input[type="number"]{
+  width: 4rem;
+}
+
+#tools button {
+  margin: 0.5rem;
+}
+
+#downloadOutput {
+  background: #e9e9e9;
+  border: 1px solid #8f8f8f;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin: 0.5rem 0;
+  padding: 0.125rem;
+  font-size: 0.9rem;
+}
+
+#downloadOutput:hover {
+  background: #d0d0d0;
+}
+
+#view {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#view svg {
+  display: block;
+  object-fit: contain;
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+
+#debug img, #debug canvas, #debug svg {
+  background: #ddd;
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+
+#debug p {
+  margin: 0;
+}
+
+#debug pre {
+  width: 10rem;
+  max-height: 20rem;
+  overflow: auto;
+}
+
+/**/
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  overflow: hidden;
+  height: 100%;
+}
+
+main #tools {
+  overflow-y: auto;
+}
+
+main #debug {
+  overflow-y: auto;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "scapeshop",
+  "version": "0.1.0",
+  "description": "Convert images to townscaper saves",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf ./public/dist",
+    "build": "cd public && tsc && cd..",
+    "start": "http-server ./public --mimetypes mime.types",
+    "bstart": "npm run clean && npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrkn/scapeshop.git"
+  },
+  "keywords": [],
+  "author": "Nik Coughlin <nrkn.com@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nrkn/scapeshop/issues"
+  },
+  "homepage": "https://github.com/nrkn/scapeshop#readme",
+  "devDependencies": {
+    "http-server": "^14.1.0",
+    "rimraf": "^3.0.2"
+  }
+}
