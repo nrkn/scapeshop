@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "clean": "rimraf ./public/dist",
-    "build": "cd public && tsc && cd..",
-    "start": "http-server ./public --mimetypes mime.types",
+    "clean": "rimraf ./docs/dist",
+    "build": "cd docs && tsc && cd..",
+    "start": "http-server ./docs --mimetypes mime.types",
     "bstart": "npm run clean && npm run build && npm run start"
   },
   "repository": {

@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 0.9em;
 }
 
 body {
@@ -46,6 +47,7 @@ header h1 a {
 #tools fieldset {
   background: #eee;  
   padding: 0 0.25rem;
+  border: 0;
 }
 
 #tools legend {

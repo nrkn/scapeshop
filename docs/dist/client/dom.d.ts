@@ -1,0 +1,9 @@
+export declare const loadImage: (src: string) => Promise<HTMLImageElement>;
+export declare const loadText: (src: string) => Promise<string>;
+export declare const loadJson: <T>(src: string) => Promise<T>;
+export declare const imageToCanvas: (image: HTMLImageElement) => HTMLCanvasElement;
+export declare const canvasToImageData: (canvas: HTMLCanvasElement) => ImageData;
+export declare const fileImage: (file: File) => Promise<HTMLImageElement>;
+export declare const fileDataUrl: (file: File) => Promise<string>;
+export declare const inputFile: (inputEl: HTMLInputElement) => File | undefined;
+export declare const parseXml: (xml: string) => Document;
