@@ -16,16 +16,17 @@ import { createPreview } from './preview.js'
 
 import { option } from '../lib/h.js'
 
-import { heightMapper } from '../pixel-mappers/height.js'
-import { colorMapper } from '../pixel-mappers/color.js'
-import { colorHeightMapper } from '../pixel-mappers/color-height.js'
+import { towerHeightMapper } from '../pixel-mappers/height.js'
+import { baseColorMapper } from '../pixel-mappers/color.js'
+import { baseColorHeightMapper, towerColorHeightMapper } from '../pixel-mappers/color-height.js'
 import { createDebug } from './debug.js'
 
 const pixelMappers = {
-  'color + height': colorHeightMapper,
+  'color + height (base)': baseColorHeightMapper,
+  'color + height (tower)': towerColorHeightMapper,
   threshold: thresholdMapper,
-  height: heightMapper,
-  color: colorMapper,
+  height: towerHeightMapper,
+  color: baseColorMapper,
   custom: () => [{ t: 15, h: 0 }]
 }
 

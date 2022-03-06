@@ -1,7 +1,7 @@
 import { closestColor } from '../lib/palette.js'
 import { PixelMapper } from './types.js'
 
-export const colorMapper: PixelMapper = rgba => {
+export const baseColorMapper: PixelMapper = rgba => {
   const { r, g, b, a } = rgba
   const index = closestColor( r, g, b, a )  
 
